@@ -47,6 +47,8 @@ class Manage {
 	
 	public function tile() {
 	    $tile = new Tile('git');
+	    if(!function_exists('shell_exec'))
+	    	$tile->alert = 'Shell Exec not available!';
     	$tile->body .= '<h2>Fetch and upgrade your sites repos.</h2>';
     	return $tile;
     }
