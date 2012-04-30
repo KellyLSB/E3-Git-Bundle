@@ -1,0 +1,42 @@
+div.wrapper {
+	margin: 20px;
+}
+
+.controls {
+	position: fixed;
+	top: 2em;
+	right: 1.5em;
+	color: #888;
+	background: #333;
+	padding: 0.5em 0.5em 0.5em;
+	border-radius: 4px;
+	box-shadow: 0 0 10px #333;
+	z-index: 1;
+}
+
+.controls a {
+	color: white;
+}
+
+.controls a, .controls em {
+	text-decoration: none;
+	padding: 0.5em 0.5em;
+}
+
+.controls span {
+	font-style: normal;
+	color: #FFF;
+}
+
+.controls a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.controls a:active {
+	color: #ddd;
+}
+
+.controls .state-paused, .controls .state-running, .controls .state-complete {
+	display: none;
+}

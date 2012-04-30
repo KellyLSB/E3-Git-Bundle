@@ -37,9 +37,10 @@ class Bundle {
 		 */
 		$this->developer = e::$environment->requireVar('Development.Master', 'yes | no');
 
-		//$this->check_status();
-
-		//e\Complete();
+		/**
+		 * Add to the manager
+		 */
+		e::configure('manage')->activeAddKey('bundle', __NAMESPACE__, 'git');
 	}
 
 	public function check_status($pull = false) {
