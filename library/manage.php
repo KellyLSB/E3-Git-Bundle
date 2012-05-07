@@ -19,13 +19,7 @@ class Manage {
 	}
 
 	public function index($pull = false) {
-		ob_start();
-			
-			e::$git->check_status($pull);
-
-		$return = ob_get_contents();
-		ob_end_flush();
-		return $return;
+		return e::$git->check_status($pull);
 	}
 	
 	public function page($path) {

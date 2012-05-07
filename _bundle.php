@@ -100,7 +100,7 @@ class Bundle {
 			
 		}
 
-		echo $final;
+		return $final;
 	}
 
 }
