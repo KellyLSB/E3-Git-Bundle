@@ -68,6 +68,8 @@ class Bundle {
 			$branch = e\array_find('* ', $output);
 			$branch = substr($output[$branch], 2);
 
+			shell_exec("cd $repo && git fetch origin");
+
 			$output = shell_exec("cd $repo && git log --name-only ..origin/$branch");
 			$commits = array_filter(explode('commit ', $output));
 
