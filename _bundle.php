@@ -43,6 +43,10 @@ class Bundle {
 		e::configure('manage')->activeAddKey('bundle', __NAMESPACE__, 'git');
 	}
 
+	/**
+	 * Get the status or pull the repos
+	 * @author Kelly Becker
+	 */
 	public function check_status($pull = false) {
 		$final = '';
 		foreach($this->repos as $repo) {
